@@ -8,18 +8,20 @@
 
 <body>
     <script>
-    // create a function which randomly returns Rock, Paper, or Scissors from an array
-        let computerHand = ["ROCK", "PAPER", "SCISSORS"];
-        computerHandLength = computerHand.length;
 
-        function computerPlay(){
-            return computerHand[Math.floor(Math.random() * computerHandLength)];
+    // function which randomly returns Rock, Paper, or Scissors from an array,
+    // array items are all caps to create consistency for comparison with user input
+
+    let computerHand = ["ROCK", "PAPER", "SCISSORS"];
+    computerHandLength = computerHand.length;
+
+    function computerPlay(){
+        return computerHand[Math.floor(Math.random() * computerHandLength)];
             
-        }
+    }
     
-    // set up a function to compare user input and computerPlay based on game rules, and print the results.
-
-
+    // // function to compare user input and computerPlay based on game rules, 
+    // print the results, and return the score.
     function playRound(playerSelection, computerSelection){
 
         playerSelection = prompt("Rock, Paper, Scissors. Type wisely.").toUpperCase();
@@ -76,7 +78,8 @@
         }
     }
 
-
+    // function to play the game, resets scores to 0, plays 5 rounds, 
+    // then check the scores and displays winner
 
     function game(){
         playerScore = 0;
@@ -89,15 +92,22 @@
         playRound();
         checkScore();
     }
+
+    // function to check score, if player reaches 3 points within 5 rounds, they win
+    // or else its a draw
+
     function checkScore(){
             if (playerScore < 3 && computerScore < 3){
                 alert("No one reached 3 wins. To play again, refresh the page.")
 
             }else if (playerScore === 3) {
                 alert("You've won the game! To play again, refresh the page.");
-            }else if (computerScore === 3){alert("You've lost the game....:/ To play again, refresh the page.");}
+            }else if (computerScore === 3)
+                {alert("You've lost the game....:/ To play again, refresh the page.");}
     }
 
+    // run the game on page load
+    
     game();
 
     </script>
