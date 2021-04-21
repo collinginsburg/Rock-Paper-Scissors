@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
+
+<body>
+    <script>
+    // create a function which randomly returns Rock, Paper, or Scissors from an array
+        let computerHand = ["ROCK", "PAPER", "SCISSORS"];
+        computerHandLength = computerHand.length;
+
+        function computerPlay(){
+            return computerHand[Math.floor(Math.random() * computerHandLength)];
+            
+        }
+    
+    // set up a function to compare user input and computerPlay based on game rules, and print the results.
+
+
+    function playRound(playerSelection, computerSelection){
+
+        playerSelection = prompt("Rock, Paper, Scissors. 5 rounds. Choose wisely.").toUpperCase();
+        computerSelection = computerPlay().toUpperCase();
+
+        if (playerSelection === "ROCK" && computerSelection === "SCISSORS"){
+            console.log ("You win! Rock beats Scissors.");
+            playerScore = playerScore + 1;
+            console.log(
+            `Player score: ${playerScore} Opponent Score: ${computerScore}`);
+            return playerScore;
+        }else if (playerSelection === "ROCK" && computerSelection === "PAPER"){
+            computerScore = computerScore + 1; 
+            console.log ("You lose! Paper beats Rock");
+            console.log(
+            `Player score: ${playerScore} Opponent Score: ${computerScore}`);
+            return computerScore;
+        }else if (playerSelection === "ROCK" && computerSelection === "ROCK"){
+            console.log ("Tie!");
+            console.log(
+            `Player score: ${playerScore} Opponent Score: ${computerScore}`);
+        }else if (playerSelection === "SCISSORS" && computerSelection === "ROCK"){
+            console.log ("You lose. Rock beats Scissors");
+            computerScore = computerScore + 1;
+            console.log(
+            `Player score: ${playerScore} Opponent Score: ${computerScore}`);
+            return computerScore;
+        }else if (playerSelection === "SCISSORS" && computerSelection === "PAPER"){
+            console.log ("You win! Scissors beats Paper!");
+            playerScore = playerScore + 1;
+            console.log(
+            `Player score: ${playerScore} Opponent Score: ${computerScore}`);
+            return playerScore;
+        }else if (playerSelection === "SCISSORS" && computerSelection === "SCISSORS"){
+            console.log("Tie!");
+            console.log(
+            `Player score: ${playerScore} Opponent Score: ${computerScore}`);
+        }else if (playerSelection === "PAPER" && computerSelection === "ROCK"){
+            console.log ("You win! Paper beats Rock!");
+            playerScore = playerScore + 1; 
+            console.log(
+            `Player score: ${playerScore} Opponent Score: ${computerScore}`);
+            return playerScore;
+        }else if (playerSelection === "PAPER" && computerSelection === "PAPER"){
+            console.log ("Tie!");
+            console.log(
+            `Player score: ${playerScore} Opponent Score: ${computerScore}`);
+        }else if (playerSelection === "PAPER" && computerSelection === "SCISSORS"){
+            console.log ("You lose! Scissors beats Paper.");
+            computerScore = computerScore + 1; 
+            console.log(
+            `Player score: ${playerScore} Opponent Score: ${computerScore}`);
+            return computerScore;
+        }
+    }
+
+
+
+    function game(){
+        playerScore = 0;
+        computerScore = 0;
+
+        playRound();
+        playRound();
+        playRound();
+        playRound();
+        playRound();
+        checkScore();
+    }
+function checkScore(){
+        if (playerScore < 3 && computerScore < 3){
+            alert("No one reached 3 wins. Play another game.")
+
+        }else if (playerScore === 3) {
+            alert("You've won the game!");
+        }
+        else if (computerScore === 3){alert("You've lost the game....:/");}
+    }
+
+
+    </script>
+</body>
+
+
+
+</html>
