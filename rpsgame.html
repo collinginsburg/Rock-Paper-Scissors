@@ -89,17 +89,17 @@
         playRound();
         checkScore();
     }
-function checkScore(){
-        if (playerScore < 3 && computerScore < 3){
-            alert("No one reached 3 wins. Play another game.")
+    function checkScore(){
+            if (playerScore < 3 && computerScore < 3){
+                alert("No one reached 3 wins. To play again, refresh the page.")
 
-        }else if (playerScore === 3) {
-            alert("You've won the game!");
-        }
-        else if (computerScore === 3){alert("You've lost the game....:/");}
+            }else if (playerScore === 3) {
+                alert("You've won the game! To play again, refresh the page.");
+            }else if (computerScore === 3){alert("You've lost the game....:/ To play again, refresh the page.");}
     }
 
-game();
+    game();
+
     </script>
 </body>
 
