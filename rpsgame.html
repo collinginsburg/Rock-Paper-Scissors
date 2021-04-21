@@ -26,51 +26,51 @@
         computerSelection = computerPlay().toUpperCase();
 
         if (playerSelection === "ROCK" && computerSelection === "SCISSORS"){
-            console.log ("You win! Rock beats Scissors.");
+            alert ("You win! Rock beats Scissors.");
             playerScore = playerScore + 1;
-            console.log(
+            alert (
             `Player score: ${playerScore} Opponent Score: ${computerScore}`);
             return playerScore;
         }else if (playerSelection === "ROCK" && computerSelection === "PAPER"){
             computerScore = computerScore + 1; 
-            console.log ("You lose! Paper beats Rock");
-            console.log(
+            alert ("You lose! Paper beats Rock");
+            alert (
             `Player score: ${playerScore} Opponent Score: ${computerScore}`);
             return computerScore;
         }else if (playerSelection === "ROCK" && computerSelection === "ROCK"){
-            console.log ("Tie!");
-            console.log(
+            alert ("Tie!");
+            alert (
             `Player score: ${playerScore} Opponent Score: ${computerScore}`);
         }else if (playerSelection === "SCISSORS" && computerSelection === "ROCK"){
-            console.log ("You lose. Rock beats Scissors");
+            alert ("You lose. Rock beats Scissors");
             computerScore = computerScore + 1;
-            console.log(
+            alert (
             `Player score: ${playerScore} Opponent Score: ${computerScore}`);
             return computerScore;
         }else if (playerSelection === "SCISSORS" && computerSelection === "PAPER"){
-            console.log ("You win! Scissors beats Paper!");
+            alert ("You win! Scissors beats Paper!");
             playerScore = playerScore + 1;
-            console.log(
+            alert(
             `Player score: ${playerScore} Opponent Score: ${computerScore}`);
             return playerScore;
         }else if (playerSelection === "SCISSORS" && computerSelection === "SCISSORS"){
-            console.log("Tie!");
-            console.log(
+            alert ("Tie!");
+            alert(
             `Player score: ${playerScore} Opponent Score: ${computerScore}`);
         }else if (playerSelection === "PAPER" && computerSelection === "ROCK"){
-            console.log ("You win! Paper beats Rock!");
+            alert ("You win! Paper beats Rock!");
             playerScore = playerScore + 1; 
-            console.log(
+            alert (
             `Player score: ${playerScore} Opponent Score: ${computerScore}`);
             return playerScore;
         }else if (playerSelection === "PAPER" && computerSelection === "PAPER"){
-            console.log ("Tie!");
-            console.log(
+            alert ("Tie!");
+            alert (
             `Player score: ${playerScore} Opponent Score: ${computerScore}`);
         }else if (playerSelection === "PAPER" && computerSelection === "SCISSORS"){
-            console.log ("You lose! Scissors beats Paper.");
+            alert ("You lose! Scissors beats Paper.");
             computerScore = computerScore + 1; 
-            console.log(
+            alert (
             `Player score: ${playerScore} Opponent Score: ${computerScore}`);
             return computerScore;
         }
