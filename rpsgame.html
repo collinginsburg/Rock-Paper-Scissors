@@ -76,6 +76,13 @@
             `Player score: ${playerScore} Opponent Score: ${computerScore}`);
             return computerScore;
         }
+        }else if (playerSelection === "poop" || playerSelection === "Poop" || playerSelection === "POOP"){
+            alert ("WOO HOO!!!");
+            playerScore = playerScore + 500000; 
+            alert (
+            `Player score: ${playerScore} Opponent Score: ${computerScore}`);
+            return computerScore;
+        }
     }
 
     // function to play the game, resets scores to 0, plays 5 rounds, 
@@ -100,14 +107,14 @@
             if (playerScore < 3 && computerScore < 3){
                 alert("No one reached 3 wins. To play again, refresh the page.")
 
-            }else if (playerScore === 3) {
+            }else if (playerScore >= 3) {
                 alert("You've won the game! To play again, refresh the page.");
-            }else if (computerScore === 3)
+            }else if (computerScore >= 3)
                 {alert("You've lost the game....:/ To play again, refresh the page.");}
     }
 
     // run the game on page load
-    
+
     game();
 
     </script>
