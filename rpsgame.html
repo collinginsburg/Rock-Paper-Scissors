@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
+    <title>Rock Paper Scissors Game</title>
 </head>
 
 <body>
     <script>
 
-    // function which randomly returns Rock, Paper, or Scissors from an array,
+    // The COM: function which randomly returns Rock, Paper, or Scissors from an array,
     // array items are all caps to create consistency for comparison with user input
 
     let computerHand = ["ROCK", "PAPER", "SCISSORS"];
@@ -20,8 +20,9 @@
             
     }
     
-    // // function to compare user input and computerPlay based on game rules, 
+    // // function to compare user input and computerPlay based on rockpaperscissors game rules, 
     // print the results, and return the score.
+
     function playRound(playerSelection, computerSelection){
 
         playerSelection = prompt("Rock, Paper, Scissors. Type wisely.").toUpperCase();
@@ -84,27 +85,33 @@
         }
     }
 
-    // function to play the game: resets scores to 0, alerts welcome message, plays 5 rounds, 
-    // then check the scores and displays winner
+    // function to play 1st to 5 rockpaperscissor game: 
+    // resets scores to 0, 
+    // alerts welcome message, 
+    // plays a round, and continues loop until a player hits 5 points, 
+    // then checks the scores and displays winner
 
     function game(){
         playerScore = 0;
         computerScore = 0;
-        alert("The Game is Rock, Paper, Scissors. First to 5 wins. Good Luck.")
-       do {
-        playRound();
-    }
-    while (playerScore < 5 && computerScore < 5);
-    checkScore();
+        alert("The Game is Rock, Paper, Scissors. First to 5 wins. Good Luck.");
+
+        do {
+            playRound();
+        }
+        while (playerScore < 5 && computerScore < 5);
+            checkScore();
 }
 
-    // function to check score, first player to reach 5 points, alert they have won
+    // function to check score after a player hits 5, first player to reach 5 points 
+    // determines win/lose alert
 
     function checkScore(){
-            if (playerScore >= 5){
-                alert("You win! To play again, refresh the page.")
+        if (playerScore >= 5){
+            alert("You win! To play again, refresh the page.")
 
-            }else{alert("You've lost the game....:/ To play again, refresh the page.");}
+        }else{
+            alert("You've lost the game....:/ To play again, refresh the page.");}
     }
 
     // run the game on page load
