@@ -90,26 +90,21 @@
     function game(){
         playerScore = 0;
         computerScore = 0;
-
+        alert("The Game is Rock, Paper, Scissors. First to 5 wins. Good Luck.")
+       do {
         playRound();
-        playRound();
-        playRound();
-        playRound();
-        playRound();
-        checkScore();
     }
+    while (playerScore < 5 && computerScore < 5);
+    checkScore();
+}
 
-    // function to check score, if player reaches 3 points within 5 rounds, they win
-    // or else its a draw
+    // function to check score, first player to reach 5 points, alert they have won
 
     function checkScore(){
-            if (playerScore < 3 && computerScore < 3){
-                alert("No one reached 3 wins. To play again, refresh the page.")
+            if (playerScore >= 5){
+                alert("You win! To play again, refresh the page.")
 
-            }else if (playerScore >= 3) {
-                alert("You've won the game! To play again, refresh the page.");
-            }else if (computerScore >= 3)
-                {alert("You've lost the game....:/ To play again, refresh the page.");}
+            }else{alert("You've lost the game....:/ To play again, refresh the page.");}
     }
 
     // run the game on page load
