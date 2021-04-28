@@ -120,6 +120,8 @@
     `Player score: ${playerScore} Opponent Score: ${computerScore}`;    
 
 // reset game function
+const RESET = document.querySelector('.reset');
+RESET.addEventListener('click', resetGame);
 
 function resetGame(){
     playerScore = 0;
