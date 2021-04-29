@@ -1,6 +1,41 @@
 body{
 	font-family: monospace;
-	margin
+
+}
+
+.contentwrapper{
+	text-align: center;
+	margin-top: 150px;
+
+}
+
+.pscore{
+	display: inline-block;
+	font-size: 10em;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+.player{
+	font-size: .2em;
+}
+.cscore{
+	display: inline-block;
+	font-size: 10em;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+.computer{
+	font-size: .2em;
+}
+.rps{
+	display: inline;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.reset{
+	display: block;
+	margin: 0 auto;
 }
 
 

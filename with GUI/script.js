@@ -115,6 +115,7 @@
     SCISSORS.addEventListener('click', playScissors);
 
 // set inital score display
+    // const playerScore = document.querySelector()
     const SCORE = document.querySelector(".score");
     SCORE.textContent = 
     `Player score: ${playerScore} Opponent Score: ${computerScore}`;    
