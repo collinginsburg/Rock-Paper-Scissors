@@ -21,6 +21,7 @@
             computerScoreboard.textContent = computerScore;
             playerScoreboard.textContent = playerScore;
             checkScore();
+ 
             return playerScore;
         }else if (playerSelection === "ROCK" && computerSelection === "PAPER"){
             computerScore = computerScore + 1; 
@@ -28,18 +29,21 @@
             computerScoreboard.textContent = computerScore;
             playerScoreboard.textContent = playerScore;
             checkScore();
+
             return computerScore;
         }else if (playerSelection === "ROCK" && computerSelection === "ROCK"){
             alert ("Tie!");
             computerScoreboard.textContent = computerScore;
             playerScoreboard.textContent = playerScore;
             checkScore();
+
         }else if (playerSelection === "SCISSORS" && computerSelection === "ROCK"){
             alert ("You lose. Rock beats Scissors");
             computerScore = computerScore + 1;
             computerScoreboard.textContent = computerScore;
             playerScoreboard.textContent = playerScore;
             checkScore();
+
             return computerScore;
         }else if (playerSelection === "SCISSORS" && computerSelection === "PAPER"){
             alert ("You win! Scissors beats Paper!");
@@ -47,30 +51,35 @@
             computerScoreboard.textContent = computerScore;
             playerScoreboard.textContent = playerScore;
             checkScore();
+
             return playerScore;
         }else if (playerSelection === "SCISSORS" && computerSelection === "SCISSORS"){
             alert ("Tie!");
             computerScoreboard.textContent = computerScore;
             playerScoreboard.textContent = playerScore;
             checkScore();
+
         }else if (playerSelection === "PAPER" && computerSelection === "ROCK"){
             alert ("You win! Paper beats Rock!");
             playerScore = playerScore + 1; 
             computerScoreboard.textContent = computerScore;
             playerScoreboard.textContent = playerScore;
             checkScore();
+
             return playerScore;
         }else if (playerSelection === "PAPER" && computerSelection === "PAPER"){
             alert ("Tie!");
             computerScoreboard.textContent = computerScore;
             playerScoreboard.textContent = playerScore;
             checkScore();
+
         }else if (playerSelection === "PAPER" && computerSelection === "SCISSORS"){
             alert ("You lose! Scissors beats Paper.");
             computerScore = computerScore + 1; 
             computerScoreboard.textContent = computerScore;
             playerScoreboard.textContent = playerScore;
             checkScore();
+
             return computerScore;
         } else if (playerSelection === "poop" || playerSelection === "Poop" || playerSelection === "POOP"){
             alert ("WOO HOO!!!");
@@ -78,6 +87,7 @@
             computerScoreboard.textContent = computerScore;
             playerScoreboard.textContent = playerScore;
             checkScore();
+
             return computerScore;
 
         }
@@ -155,3 +165,17 @@ function resetGame(){
     gameover.classList.add('disappear');
     console.clear();   
 }
+
+
+// rock, paper scissors shoot animation
+// function animations(){
+//     console.log("hello");
+
+// ROCK.classList.remove('rock_animation');
+// setTimeout(ROCK.classList.add('rock_animation'), 1000);
+// PAPER.classList.remove('paper_animation');
+// PAPER.classList.add('.aper_animation');
+// SCISSORS.classList.remove('scissors_animation');
+// SCISSORS.classList.add('scissors_animation');
+// }
+

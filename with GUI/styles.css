@@ -34,13 +34,46 @@ body{
 	font-size: .2em;
 }
 .rps{
-	display: inline;
+	/* display: block; */
 	margin: .3em;
 	font-family: monospace;
 	font-size: 2em;
-	width: 100px;
-	height: 100px;
+	width: 70px;
+	height: 70px;
 	/* fill: red; */
+}
+
+
+.rock_animation{
+	opacity: 0%;
+	animation: fadein 2s;
+	animation-delay: 1s;
+	animation-fill-mode: forwards;
+	/* fill: red; */
+}
+
+.paper_animation{
+	opacity: 0%;
+	animation: fadein 2s ;
+	animation-delay: 2s;
+	animation-fill-mode: forwards;
+}
+
+.scissors_animation{
+	opacity: 0%;
+	animation: fadein 2s;
+	animation-delay: 3s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+	0%{
+		opacity: 0%;
+	}
+
+	100%{
+		opacity: 100%;
+	}
 }
 
 svg:hover{
@@ -55,7 +88,7 @@ svg:hover{
 .reset{
 	display: block;
 	margin: 0 auto;
-	margin-top: 3em;
+	margin-top: 2em;
 	font-family: chicago, monospace;
 	border-radius: 0%;
 }
