@@ -5,13 +5,13 @@ body{
 
 .contentwrapper{
 	text-align: center;
-	margin-top: 150px;
+	margin-top: 75px;
 
 }
 
 .pscore{
 	display: inline-block;
-	font-size: 10em;
+	font-size: 9em;
 	margin-left: 10%;
 	margin-right: 10%;
 }
@@ -20,7 +20,7 @@ body{
 }
 .cscore{
 	display: inline-block;
-	font-size: 10em;
+	font-size: 9em;
 	margin-left: 10%;
 	margin-right: 10%;
 }
@@ -31,7 +31,7 @@ body{
 	display: inline;
 	margin: .3em;
 	font-family: monospace;
-	font-size: 3em;
+	font-size: 2em;
 }
 
 .rpsbuttonwrap{
