@@ -1,5 +1,11 @@
+@font-face {
+	font-family: chicago;
+	src: url(chicago/ChicagoFLF.ttf);
+  }
+
+
 body{
-	font-family: monospace;
+	font-family: chicago, monospace;
 
 }
 
@@ -32,6 +38,14 @@ body{
 	margin: .3em;
 	font-family: monospace;
 	font-size: 2em;
+	width: 100px;
+	height: 100px;
+	/* fill: red; */
+}
+
+svg:hover{
+	background-color: black;
+	fill: white;
 }
 
 .rpsbuttonwrap{
@@ -42,6 +56,8 @@ body{
 	display: block;
 	margin: 0 auto;
 	margin-top: 3em;
+	font-family: chicago, monospace;
+	border-radius: 0%;
 }
 
 
