@@ -18,74 +18,75 @@
         if (playerSelection === "ROCK" && computerSelection === "SCISSORS"){
             alert ("You win! Rock beats Scissors.");
             playerScore = playerScore + 1;
-            computerScoreboard.textContent = computerScore;
-            playerScoreboard.textContent = playerScore;
+            computerScoreboard.textContent = `Computer: ${computerScore}`;
+            playerScoreboard.textContent = `Player: ${playerScore}`;
+            animations();
             checkScore();
  
             return playerScore;
         }else if (playerSelection === "ROCK" && computerSelection === "PAPER"){
             computerScore = computerScore + 1; 
             alert ("You lose! Paper beats Rock");
-            computerScoreboard.textContent = computerScore;
-            playerScoreboard.textContent = playerScore;
+            computerScoreboard.textContent = `Computer: ${computerScore}`;
+            playerScoreboard.textContent = `Player: ${playerScore}`;
             checkScore();
 
             return computerScore;
         }else if (playerSelection === "ROCK" && computerSelection === "ROCK"){
             alert ("Tie!");
-            computerScoreboard.textContent = computerScore;
-            playerScoreboard.textContent = playerScore;
+            computerScoreboard.textContent = `Computer: ${computerScore}`;
+            playerScoreboard.textContent = `Player: ${playerScore}`;
             checkScore();
 
         }else if (playerSelection === "SCISSORS" && computerSelection === "ROCK"){
             alert ("You lose. Rock beats Scissors");
             computerScore = computerScore + 1;
-            computerScoreboard.textContent = computerScore;
-            playerScoreboard.textContent = playerScore;
+            computerScoreboard.textContent = `Computer: ${computerScore}`;
+            playerScoreboard.textContent = `Player: ${playerScore}`;
             checkScore();
 
             return computerScore;
         }else if (playerSelection === "SCISSORS" && computerSelection === "PAPER"){
             alert ("You win! Scissors beats Paper!");
             playerScore = playerScore + 1;
-            computerScoreboard.textContent = computerScore;
-            playerScoreboard.textContent = playerScore;
+            computerScoreboard.textContent = `Computer: ${computerScore}`;
+            playerScoreboard.textContent = `Player: ${playerScore}`;
             checkScore();
 
             return playerScore;
         }else if (playerSelection === "SCISSORS" && computerSelection === "SCISSORS"){
             alert ("Tie!");
-            computerScoreboard.textContent = computerScore;
-            playerScoreboard.textContent = playerScore;
+            computerScoreboard.textContent = `Computer: ${computerScore}`;
+            playerScoreboard.textContent = `Player: ${playerScore}`;
             checkScore();
 
         }else if (playerSelection === "PAPER" && computerSelection === "ROCK"){
             alert ("You win! Paper beats Rock!");
             playerScore = playerScore + 1; 
-            computerScoreboard.textContent = computerScore;
-            playerScoreboard.textContent = playerScore;
+            computerScoreboard.textContent = `Computer: ${computerScore}`;
+            playerScoreboard.textContent = `Player: ${playerScore}`;
             checkScore();
 
             return playerScore;
         }else if (playerSelection === "PAPER" && computerSelection === "PAPER"){
             alert ("Tie!");
-            computerScoreboard.textContent = computerScore;
-            playerScoreboard.textContent = playerScore;
+            computerScoreboard.textContent = `Computer: ${computerScore}`;
+            playerScoreboard.textContent = `Player: ${playerScore}`;
             checkScore();
 
         }else if (playerSelection === "PAPER" && computerSelection === "SCISSORS"){
             alert ("You lose! Scissors beats Paper.");
             computerScore = computerScore + 1; 
-            computerScoreboard.textContent = computerScore;
-            playerScoreboard.textContent = playerScore;
+            computerScoreboard.textContent = `Computer: ${computerScore}`;
+            playerScoreboard.textContent = `Player: ${playerScore}`;
             checkScore();
 
             return computerScore;
         } else if (playerSelection === "poop" || playerSelection === "Poop" || playerSelection === "POOP"){
             alert ("WOO HOO!!!");
             playerScore = playerScore + 500000; 
-            computerScoreboard.textContent = computerScore;
-            playerScoreboard.textContent = playerScore;
+            computerScoreboard.textContent = `Computer: ${computerScore}`;
+            playerScoreboard.textContent = `Player: ${playerScore}`;
             checkScore();
 
             return computerScore;
@@ -142,9 +143,9 @@
 // set inital score display
 
     const playerScoreboard = document.querySelector('.pscoreNum');
-    playerScoreboard.textContent = playerScore;
+    playerScoreboard.textContent = `Player: ${playerScore}`;
     const computerScoreboard = document.querySelector('.cscoreNum');
-    computerScoreboard.textContent = computerScore;
+    computerScoreboard.textContent = `Computer: ${computerScore}`;
     // const SCORE = document.querySelector(".score");
     // SCORE.textContent = 
     // `Player score: ${playerScore} Opponent Score: ${computerScore}`;    
@@ -159,8 +160,8 @@ PLAYAGAIN.addEventListener('click', resetGame);
 function resetGame(){
     playerScore = 0;
     computerScore = 0;
-    computerScoreboard.textContent = computerScore;
-    playerScoreboard.textContent = playerScore;
+    computerScoreboard.textContent = `Computer: ${computerScore}`;
+    playerScoreboard.textContent = `Player: ${playerScore}`;
     mainscreen.classList.remove('disappear');
     gameover.classList.add('disappear');
     console.clear();   
@@ -168,14 +169,8 @@ function resetGame(){
 
 
 // rock, paper scissors shoot animation
-// function animations(){
-//     console.log("hello");
+function animations(){
 
-// ROCK.classList.remove('rock_animation');
-// setTimeout(ROCK.classList.add('rock_animation'), 1000);
-// PAPER.classList.remove('paper_animation');
-// PAPER.classList.add('.aper_animation');
-// SCISSORS.classList.remove('scissors_animation');
-// SCISSORS.classList.add('scissors_animation');
-// }
+}
+
 
