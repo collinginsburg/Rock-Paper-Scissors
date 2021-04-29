@@ -11,26 +11,33 @@
 <body>
 
     <main class="contentwrapper">
+
         <div class="scorecolumns">
-            <div class="pscore">0
+            <div class="pscore">
+                <h1 class="pscoreNum">0</h1>
                 <p class="player">player</p>
             </div>
-            <div class="cscore">0
+            <div class="cscore">
+                <h1 class="cscoreNum">0</h1>
                 <p class="player">computer</p>
             </div>
 
         </div>
-
+    <div class="rpsbuttonwrap">
         <button class="rock buttonwrap rps">Rock</button>
         <button class="paper buttonwrap rps">Paper</button>
         <button class="scissors buttonwrap rps">Scissors</button>
+    </div>
 
         <button class="reset buttonwrap">Reset Game</button>
         <div class="winner"></div>
-        <div class="resetModal">
-            <button>Play Again</button>
-        </div>
+
     </main>
+
+    <div class="resetModal disappear">
+        <h2 class="gameovertext">You lost to a COMPUTER. What a shame...</h2>
+        <button class="playagain">Play Again</button>
+    </div>
 
 
 
