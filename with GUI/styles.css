@@ -70,6 +70,8 @@ svg:hover{
 	font-size: 4em;
 	font-family: monospace;
 	color: white;
+	font-family: chicago, monospace;
+	border-radius: 0%;
 }
 
 .disappear{
