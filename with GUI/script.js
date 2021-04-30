@@ -13,15 +13,24 @@
     let playerScore = 0;
     let roundWin;
 
-    // plays a round, declares winner, adds score, and runs a score check
+    // set initial score display
+
+    const playerScoreboard = document.querySelector('.pscoreNum');
+    playerScoreboard.textContent = `PLAYER: ${playerScore}`;
+    const computerScoreboard = document.querySelector('.cscoreNum');
+    computerScoreboard.textContent = `COM: ${computerScore}`;
+
+
+
+    // plays a round, declares winner, adds score, displays correct hands, and runs a score check
     function playRound(playerSelection, computerSelection){
 
         if (playerSelection === "ROCK" && computerSelection === "SCISSORS"){
             // alert ("You win! Rock beats Scissors.");
             roundWin = true;
             playerScore = playerScore + 1;
-            computerScoreboard.textContent = `Computer: ${computerScore} LOSE!`;
-            playerScoreboard.textContent = `Player: ${playerScore} WIN!`;
+            computerScoreboard.textContent = `COM: ${computerScore} LOSE!`;
+            playerScoreboard.textContent = `PLAYER: ${playerScore} WIN!`;
             displayPlayerRock();
             displayComputerScissors();
             playerRock.style.cssText = ('fill:green; display:block');
@@ -31,8 +40,8 @@
         }else if (playerSelection === "ROCK" && computerSelection === "PAPER"){
             computerScore = computerScore + 1; 
             // alert ("You lose! Paper beats Rock");
-            computerScoreboard.textContent = `Computer: ${computerScore} WIN!`;
-            playerScoreboard.textContent = `Player: ${playerScore} LOSE!`;
+            computerScoreboard.textContent = `COM: ${computerScore} WIN!`;
+            playerScoreboard.textContent = `PLAYER: ${playerScore} LOSE!`;
             displayPlayerRock();
             displayComputerPaper();
             playerRock.style.cssText = ('fill:red; display:block');
@@ -41,8 +50,8 @@
 
         }else if (playerSelection === "ROCK" && computerSelection === "ROCK"){
             // alert ("Tie!");
-            computerScoreboard.textContent = `Computer: ${computerScore} TIE!`;
-            playerScoreboard.textContent = `Player: ${playerScore} TIE!`;
+            computerScoreboard.textContent = `COM: ${computerScore} TIE!`;
+            playerScoreboard.textContent = `PLAYER: ${playerScore} TIE!`;
             displayPlayerRock();
             displayComputerRock();
             playerRock.style.cssText = ('fill:black; display:block');
@@ -51,8 +60,8 @@
         }else if (playerSelection === "SCISSORS" && computerSelection === "ROCK"){
             // alert ("You lose. Rock beats Scissors");
             computerScore = computerScore + 1;
-            computerScoreboard.textContent = `Computer: ${computerScore} WIN!`;
-            playerScoreboard.textContent = `Player: ${playerScore} LOSE!`;
+            computerScoreboard.textContent = `COM: ${computerScore} WIN!`;
+            playerScoreboard.textContent = `PLAYER: ${playerScore} LOSE!`;
             displayPlayerScissors();
             displayComputerRock();
             playerScissors.style.cssText = ('fill:red; display:block');
@@ -63,8 +72,8 @@
             // alert ("You win! Scissors beats Paper!");
             roundWin = true;
             playerScore = playerScore + 1;
-            computerScoreboard.textContent = `Computer: ${computerScore} LOSE!`;
-            playerScoreboard.textContent = `Player: ${playerScore} WIN!`;
+            computerScoreboard.textContent = `COM: ${computerScore} LOSE!`;
+            playerScoreboard.textContent = `PLAYER: ${playerScore} WIN!`;
             checkScore();
             displayPlayerScissors();
             displayComputerPaper();
@@ -73,8 +82,8 @@
 
         }else if (playerSelection === "SCISSORS" && computerSelection === "SCISSORS"){
             // alert ("Tie!");
-            computerScoreboard.textContent = `Computer: ${computerScore} TIE!`;
-            playerScoreboard.textContent = `Player: ${playerScore} TIE!`;
+            computerScoreboard.textContent = `COM: ${computerScore} TIE!`;
+            playerScoreboard.textContent = `PLAYER: ${playerScore} TIE!`;
             displayPlayerScissors();
             displayComputerScissors();
             playerScissors.style.cssText = ('fill:black; display:block');
@@ -84,8 +93,8 @@
             // alert ("You win! Paper beats Rock!");
             roundWin = true;
             playerScore = playerScore + 1; 
-            computerScoreboard.textContent = `Computer: ${computerScore} LOSE!`;
-            playerScoreboard.textContent = `Player: ${playerScore} WIN!`;
+            computerScoreboard.textContent = `COM: ${computerScore} LOSE!`;
+            playerScoreboard.textContent = `PLAYER: ${playerScore} WIN!`;
             displayPlayerPaper();
             displayComputerRock();
             playerPaper.style.cssText = ('fill:green; display:block');
@@ -94,8 +103,8 @@
             return playerScore;
         }else if (playerSelection === "PAPER" && computerSelection === "PAPER"){
             // alert ("Tie!");
-            computerScoreboard.textContent = `Computer: ${computerScore} TIE!`;
-            playerScoreboard.textContent = `Player: ${playerScore} TIE!`;
+            computerScoreboard.textContent = `COM: ${computerScore} TIE!`;
+            playerScoreboard.textContent = `PLAYER: ${playerScore} TIE!`;
             displayPlayerPaper();
             displayComputerPaper();
             playerPaper.style.cssText = ('fill:black; display:block');
@@ -104,8 +113,8 @@
         }else if (playerSelection === "PAPER" && computerSelection === "SCISSORS"){
             // alert ("You lose! Scissors beats Paper.");
             computerScore = computerScore + 1; 
-            computerScoreboard.textContent = `Computer: ${computerScore} WIN!`;
-            playerScoreboard.textContent = `Player: ${playerScore} LOSE!`;
+            computerScoreboard.textContent = `COM: ${computerScore} WIN!`;
+            playerScoreboard.textContent = `PLAYER: ${playerScore} LOSE!`;
             displayPlayerPaper();
             displayComputerScissors();
             playerPaper.style.cssText = ('fill:red; display:block');
@@ -170,15 +179,8 @@
     PAPER.addEventListener('click', playPaper);
     SCISSORS.addEventListener('click', playScissors);
 
-// set inital score display
 
-    const playerScoreboard = document.querySelector('.pscoreNum');
-    playerScoreboard.textContent = `Player: ${playerScore}`;
-    const computerScoreboard = document.querySelector('.cscoreNum');
-    computerScoreboard.textContent = `Computer: ${computerScore}`;
-    // const SCORE = document.querySelector(".score");
-    // SCORE.textContent = 
-    // `Player score: ${playerScore} Opponent Score: ${computerScore}`;    
+
 
 // reset game function
 const RESET = document.querySelector('.reset');
