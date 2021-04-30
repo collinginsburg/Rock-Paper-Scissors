@@ -149,9 +149,9 @@ margin-top: 15px;
 	font-family: chicago, monospace;
 	font-size: 1.5em;
 	color:red;
-	border-radius: 0%;
 	border-color: transparent;
 	background-color: transparent;
+	-webkit-appearance: none;
 
 }
 .next{
@@ -162,7 +162,8 @@ margin-top: 15px;
 	margin-bottom: 20px;
 	font-family: chicago, monospace;
 	font-size: 1.5em;
-	border-radius: 0%;
+	border-radius: 0;
+	-webkit-appearance: none;
 
 
 }
