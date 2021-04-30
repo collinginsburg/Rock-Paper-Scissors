@@ -193,9 +193,9 @@
         displayNextRound();
     }
 
-    setTimeout(function(){ROCK.addEventListener('click', playRock);}, 4000);
-    setTimeout(function(){PAPER.addEventListener('click', playPaper);}, 4000);
-    setTimeout(function(){SCISSORS.addEventListener('click', playScissors);}, 4000);
+    setTimeout(function(){ROCK.addEventListener('click', playRock);}, 3500);
+    setTimeout(function(){PAPER.addEventListener('click', playPaper);}, 3500);
+    setTimeout(function(){SCISSORS.addEventListener('click', playScissors);}, 3500);
 
 
 
@@ -230,9 +230,9 @@ function resetGame(){
     rpsButtonGroup.forEach(button => button.style.display = "none");
     setTimeout(function(){rpsButtonGroup.forEach(button => button.style.display = "inline"); }, 5);
 
-    setTimeout(function(){ROCK.addEventListener('click', playRock);}, 4000);
-    setTimeout(function(){PAPER.addEventListener('click', playPaper);}, 4000);
-    setTimeout(function(){SCISSORS.addEventListener('click', playScissors);}, 4000);
+    setTimeout(function(){ROCK.addEventListener('click', playRock);}, 3500);
+    setTimeout(function(){PAPER.addEventListener('click', playPaper);}, 3500);
+    setTimeout(function(){SCISSORS.addEventListener('click', playScissors);}, 3500);
 
     console.clear();   
 }
@@ -314,9 +314,9 @@ function nextRound(){
     setTimeout(function(){rpsButtonGroup.forEach(button => button.style.display = "inline"); }, 5);
 
 
-    setTimeout(function(){ROCK.addEventListener('click', playRock);}, 4000);
-    setTimeout(function(){PAPER.addEventListener('click', playPaper);}, 4000);
-    setTimeout(function(){SCISSORS.addEventListener('click', playScissors);}, 4000);
+    setTimeout(function(){ROCK.addEventListener('click', playRock);}, 3500);
+    setTimeout(function(){PAPER.addEventListener('click', playPaper);}, 3500);
+    setTimeout(function(){SCISSORS.addEventListener('click', playScissors);}, 3500);
     
 }
 
