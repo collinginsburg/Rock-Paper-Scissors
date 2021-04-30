@@ -11,20 +11,20 @@ body{
 
 .contentwrapper{
 	text-align: center;
-	margin-top: 12%;
+	margin-top: 6%;
 
 }
 
 .playerHand{
-	width: 150px;
-	height: 150px;
+	width: 130px;
+	height: 130px;
 	margin: 0 auto;
 	margin-top: 1em;
 
 }
 .computerHand{
-	width: 150px;
-	height: 150px;
+	width: 130px;
+	height: 130px;
 	margin: 0 auto;
 	
 }
@@ -44,7 +44,7 @@ body{
 
 .pscore{
 	display: inline-block;
-	font-size: 2em;
+	font-size: 1.5em;
 	margin-left: 10%;
 	margin-right: 10%;
 }
@@ -56,7 +56,7 @@ body{
 }
 .cscore{
 	display: inline-block;
-	font-size: 2em;
+	font-size: 1.5em;
 	margin-left: 10%;
 	margin-right: 10%;
 }
@@ -68,26 +68,17 @@ margin-top: 15px;
 }
 
 
-.winner{
-	/* position:absolute; */
-	/* top: 320px;
-	left: 60px; */
-	/* font-weight: bold; */
-	/* display: none; */
-	/* font-family: cursive; */
+
+.rpsbuttonwrap{
+	height: 70px;
 }
-
-
-
-
 .rps{
-	/* display: block; */
+	display: inline;
 	margin: .3em;
 	font-family: monospace;
 	font-size: 2em;
 	width: 70px;
 	height: 70px;
-	/* fill: red; */
 }
 
 
@@ -132,14 +123,42 @@ margin-top: 15px;
 	margin-top: 2.2em;
 }
 
+.button_placeholder{
+	display: block;
+	opacity: 0%;
+	margin: 0 auto;
+	margin-top: 1em;
+	margin-bottom: 20px;
+	font-family: chicago, monospace;
+	font-size: 1.5em;
+	border-radius: 0%;
+}
+.next{
+	display: none;
+	opacity: 100%;
+	margin: 0 auto;
+	margin-top: 1em;
+	margin-bottom: 20px;
+	font-family: chicago, monospace;
+	font-size: 1.5em;
+	border-radius: 0%;
+
+
+}
+
+.next:hover{
+	background-color: black;
+	color: white;
+
+}
 .reset{
 	display: block;
 	margin: 0 auto;
 	margin-top: 2em;
+
 	font-family: chicago, monospace;
 	border-radius: 0%;
-
-
+	font-size: .1em;
 }
 
 .reset:hover{

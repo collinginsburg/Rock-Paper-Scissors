@@ -161,23 +161,41 @@
         let playerSelection = "ROCK";
         let computerSelection = computerPlay().toUpperCase();
         playRound(playerSelection, computerSelection);
+
+        ROCK.removeEventListener('click', playRock);
+        PAPER.removeEventListener('click', playPaper);
+        SCISSORS.removeEventListener('click', playScissors);
+
+        displayNextRound();
     }
 
     function playPaper(){
         let playerSelection = "PAPER";
         let computerSelection = computerPlay().toUpperCase();
         playRound(playerSelection, computerSelection);
+
+        ROCK.removeEventListener('click', playRock);
+        PAPER.removeEventListener('click', playPaper);
+        SCISSORS.removeEventListener('click', playScissors);
+
+        displayNextRound();
     }
 
     function playScissors(){
         let playerSelection = "SCISSORS";
         let computerSelection = computerPlay().toUpperCase();
         playRound(playerSelection, computerSelection);
+
+        ROCK.removeEventListener('click', playRock);
+        PAPER.removeEventListener('click', playPaper);
+        SCISSORS.removeEventListener('click', playScissors);
+
+        displayNextRound();
     }
 
-    ROCK.addEventListener('click', playRock);
-    PAPER.addEventListener('click', playPaper);
-    SCISSORS.addEventListener('click', playScissors);
+    setTimeout(function(){ROCK.addEventListener('click', playRock);}, 4000);
+    setTimeout(function(){PAPER.addEventListener('click', playPaper);}, 4000);
+    setTimeout(function(){SCISSORS.addEventListener('click', playScissors);}, 4000);
 
 
 
@@ -192,16 +210,30 @@ PLAYAGAIN.addEventListener('click', resetGame);
 function resetGame(){
     playerScore = 0;
     computerScore = 0;
-    computerScoreboard.textContent = `Computer: ${computerScore}`;
-    playerScoreboard.textContent = `Player: ${playerScore}`;
+
+    computerScoreboard.textContent = `COM: ${computerScore}`;
+    playerScoreboard.textContent = `PLAYER: ${playerScore}`;
+
     mainscreen.classList.remove('disappear');
     gameover.classList.add('disappear');
+
     playerRock.style.cssText = "fill:black; display: none";
     playerPaper.style.cssText = "fill:black; display: none";
     playerScissors.style.cssText = "fill:black; display: none";
     computerRock.style.cssText = "fill:black; display: none";
     computerPaper.style.cssText = "fill:black; display: none";
     computerScissors.style.cssText = "fill:black; display: none";
+
+    nextRoundPlaceholder.style.display = "block";
+    nextRoundButton.style.display = "none";
+
+    rpsButtonGroup.forEach(button => button.style.display = "none");
+    setTimeout(function(){rpsButtonGroup.forEach(button => button.style.display = "inline"); }, 5);
+
+    setTimeout(function(){ROCK.addEventListener('click', playRock);}, 4000);
+    setTimeout(function(){PAPER.addEventListener('click', playPaper);}, 4000);
+    setTimeout(function(){SCISSORS.addEventListener('click', playScissors);}, 4000);
+
     console.clear();   
 }
 
@@ -251,3 +283,41 @@ function displayComputerScissors(){
     computerScissors.style.display = "block";
 }
 
+// display next round button
+let nextRoundPlaceholder = document.querySelector('.button_placeholder');
+let nextRoundButton = document.querySelector('.next');
+
+function displayNextRound(){
+    nextRoundPlaceholder.style.display = "none";
+    nextRoundButton.style.display = "block";
+}
+
+// next round function
+
+let rpsButtonGroup = document.querySelectorAll('.rps');
+
+function nextRound(){
+    computerScoreboard.textContent = `COM: ${computerScore}`;
+    playerScoreboard.textContent = `PLAYER: ${playerScore}`;
+
+    nextRoundPlaceholder.style.display = "block";
+    nextRoundButton.style.display = "none";
+
+    computerRock.style.display = "none";
+    computerPaper.style.display = "none";
+    computerScissors.style.display = "none";
+    playerRock.style.display = "none";
+    playerPaper.style.display = "none";
+    playerScissors.style.display = "none";
+
+    rpsButtonGroup.forEach(button => button.style.display = "none");
+    setTimeout(function(){rpsButtonGroup.forEach(button => button.style.display = "inline"); }, 5);
+
+
+    setTimeout(function(){ROCK.addEventListener('click', playRock);}, 4000);
+    setTimeout(function(){PAPER.addEventListener('click', playPaper);}, 4000);
+    setTimeout(function(){SCISSORS.addEventListener('click', playScissors);}, 4000);
+    
+}
+
+nextRoundButton.addEventListener('click', nextRound);
