@@ -237,6 +237,8 @@ function resetGame(){
     setTimeout(function(){PAPER.addEventListener('click', playPaper);}, 1700);
     setTimeout(function(){SCISSORS.addEventListener('click', playScissors);}, 1700);
 
+    roundText.textContent = "First to 5...";
+
     console.clear();   
 }
 
@@ -298,6 +300,7 @@ function displayNextRound(){
 // next round function
 
 let rpsButtonGroup = document.querySelectorAll('.rps');
+let roundText = document.querySelector('.button_placeholder');
 
 function nextRound(){
     computerScoreboard.textContent = `COM: ${computerScore}`;
@@ -320,6 +323,8 @@ function nextRound(){
     setTimeout(function(){ROCK.addEventListener('click', playRock);}, 1700);
     setTimeout(function(){PAPER.addEventListener('click', playPaper);}, 1700);
     setTimeout(function(){SCISSORS.addEventListener('click', playScissors);}, 1700);
+
+    roundText.textContent = "Keep Going...";
     
 }
 

@@ -142,13 +142,17 @@ margin-top: 15px;
 
 .button_placeholder{
 	display: block;
-	opacity: 0%;
+	opacity: 100%;
 	margin: 0 auto;
 	margin-top: 1em;
 	margin-bottom: 20px;
 	font-family: chicago, monospace;
 	font-size: 1.5em;
+	color:red;
 	border-radius: 0%;
+	border-color: transparent;
+	background-color: transparent;
+
 }
 .next{
 	display: none;
@@ -200,4 +204,20 @@ margin-top: 15px;
 
 .disappear{
 	display:none;
+}
+
+
+@media (min-width: 613px){
+	.reset{
+		font-size: 1em;
+	}
+	.next{
+		margin-top: 40px;
+	}
+	.button_placeholder{
+		margin-top: 40px;
+	}
+
+
+
 }
