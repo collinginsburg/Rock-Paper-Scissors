@@ -1,3 +1,6 @@
+    
+    
+    
     // **The COM: function which randomly returns Rock, Paper, or Scissors from an array,
     // array items are all caps to create consistency for comparison with user input**
 
@@ -193,9 +196,9 @@
         displayNextRound();
     }
 
-    setTimeout(function(){ROCK.addEventListener('click', playRock);}, 3500);
-    setTimeout(function(){PAPER.addEventListener('click', playPaper);}, 3500);
-    setTimeout(function(){SCISSORS.addEventListener('click', playScissors);}, 3500);
+    setTimeout(function(){ROCK.addEventListener('click', playRock);}, 1700);
+    setTimeout(function(){PAPER.addEventListener('click', playPaper);}, 1700);
+    setTimeout(function(){SCISSORS.addEventListener('click', playScissors);}, 1700);
 
 
 
@@ -230,9 +233,9 @@ function resetGame(){
     rpsButtonGroup.forEach(button => button.style.display = "none");
     setTimeout(function(){rpsButtonGroup.forEach(button => button.style.display = "inline"); }, 5);
 
-    setTimeout(function(){ROCK.addEventListener('click', playRock);}, 3500);
-    setTimeout(function(){PAPER.addEventListener('click', playPaper);}, 3500);
-    setTimeout(function(){SCISSORS.addEventListener('click', playScissors);}, 3500);
+    setTimeout(function(){ROCK.addEventListener('click', playRock);}, 1700);
+    setTimeout(function(){PAPER.addEventListener('click', playPaper);}, 1700);
+    setTimeout(function(){SCISSORS.addEventListener('click', playScissors);}, 1700);
 
     console.clear();   
 }
@@ -314,9 +317,9 @@ function nextRound(){
     setTimeout(function(){rpsButtonGroup.forEach(button => button.style.display = "inline"); }, 5);
 
 
-    setTimeout(function(){ROCK.addEventListener('click', playRock);}, 3500);
-    setTimeout(function(){PAPER.addEventListener('click', playPaper);}, 3500);
-    setTimeout(function(){SCISSORS.addEventListener('click', playScissors);}, 3500);
+    setTimeout(function(){ROCK.addEventListener('click', playRock);}, 1700);
+    setTimeout(function(){PAPER.addEventListener('click', playPaper);}, 1700);
+    setTimeout(function(){SCISSORS.addEventListener('click', playScissors);}, 1700);
     
 }
 
