@@ -81,28 +81,40 @@ margin-top: 15px;
 	height: 70px;
 }
 
-
 .rock_animation{
 	opacity: 0%;
-	animation: fadein 2s;
+	/* animation: fadein 2s, select 1s infinite;
 	animation-delay: 1s;
-	animation-fill-mode: forwards;
-	/* fill: red; */
+	animation-fill-mode: forwards; */
+	animation: fadein 2s linear 1s 1 normal forwards running, select 1s ease-out 4s 4 normal forwards running;
 }
 
 .paper_animation{
 	opacity: 0%;
-	animation: fadein 2s ;
+	/* animation: fadein 2s, select 1s infinite;
 	animation-delay: 2s;
-	animation-fill-mode: forwards;
+	animation-fill-mode: forwards; */
+	animation: fadein 3s linear 2s 1 normal forwards running, select 1s ease-out 4s 4 normal forwards running;
 }
 
 .scissors_animation{
 	opacity: 0%;
-	animation: fadein 2s;
+	/* animation: fadein 2s, select 1s infinite;
 	animation-delay: 3s;
-	animation-fill-mode: forwards;
+	animation-fill-mode: forwards; */
+	animation: fadein 2s linear 3s 1 normal forwards running, select 1s ease-out 4s 4 normal forwards running;
+
 }
+
+@keyframes select{
+	from{
+		border-bottom: 2px dotted transparent;
+	}
+	to{
+		border-bottom: 2px dotted grey;
+	}
+}
+
 
 @keyframes fadein {
 	0%{
