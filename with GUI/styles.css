@@ -11,19 +11,20 @@ body{
 
 .contentwrapper{
 	text-align: center;
-	margin-top: 2%;
+	margin-top: 12%;
 
 }
 
 .playerHand{
-	width: 200px;
-	height: 200px;
+	width: 150px;
+	height: 150px;
 	margin: 0 auto;
+	margin-top: 1em;
 
 }
 .computerHand{
-	width: 200px;
-	height: 200px;
+	width: 150px;
+	height: 150px;
 	margin: 0 auto;
 	
 }
@@ -47,6 +48,9 @@ body{
 	margin-left: 10%;
 	margin-right: 10%;
 }
+.pscoreNum{
+	margin-top: 15px;
+}
 .player{
 	font-size: .2em;
 }
@@ -56,9 +60,26 @@ body{
 	margin-left: 10%;
 	margin-right: 10%;
 }
+.cscoreNum{
+margin-top: 15px;
+}
 .computer{
 	font-size: .2em;
 }
+
+
+.winner{
+	/* position:absolute; */
+	/* top: 320px;
+	left: 60px; */
+	/* font-weight: bold; */
+	/* display: none; */
+	/* font-family: cursive; */
+}
+
+
+
+
 .rps{
 	/* display: block; */
 	margin: .3em;
