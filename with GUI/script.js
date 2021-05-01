@@ -217,18 +217,11 @@ function resetGame(){
     computerScoreboard.textContent = `COM: ${computerScore}`;
     playerScoreboard.textContent = `PLAYER: ${playerScore}`;
 
-    mainscreen.classList.remove('disappear');
-    gameover.classList.add('disappear');
+    hideGameOver();
 
-    playerRock.style.cssText = "fill:black; display: none";
-    playerPaper.style.cssText = "fill:black; display: none";
-    playerScissors.style.cssText = "fill:black; display: none";
-    computerRock.style.cssText = "fill:black; display: none";
-    computerPaper.style.cssText = "fill:black; display: none";
-    computerScissors.style.cssText = "fill:black; display: none";
+    hideAllHands();
 
-    nextRoundPlaceholder.style.display = "block";
-    nextRoundButton.style.display = "none";
+    hideNextRoundButton();
 
     rpsButtonGroup.forEach(button => button.style.display = "none");
     setTimeout(function(){rpsButtonGroup.forEach(button => button.style.display = "inline"); }, 5);
@@ -237,95 +230,114 @@ function resetGame(){
     setTimeout(function(){PAPER.addEventListener('click', playPaper);}, 1700);
     setTimeout(function(){SCISSORS.addEventListener('click', playScissors);}, 1700);
 
-    roundText.textContent = "First to 5...";
+    roundText.textContent = "First to 5...pick wisely";
 
     console.clear();   
 }
 
-
-// rock, paper scissors shoot animation
-function animations(){
-
-}
-
-
 // display hands...
-const playerRock = document.querySelector('.playerHand.rck');
-const playerPaper = document.querySelector('.playerHand.ppr');
-const playerScissors = document.querySelector('.playerHand.scs');
-const computerRock = document.querySelector('.computerHand.rck');
-const computerPaper = document.querySelector('.computerHand.ppr');
-const computerScissors = document.querySelector('.computerHand.scs');
+    const playerRock = document.querySelector('.playerHand.rck');
+    const playerPaper = document.querySelector('.playerHand.ppr');
+    const playerScissors = document.querySelector('.playerHand.scs');
+    const computerRock = document.querySelector('.computerHand.rck');
+    const computerPaper = document.querySelector('.computerHand.ppr');
+    const computerScissors = document.querySelector('.computerHand.scs');
 
-function displayPlayerRock(){
-    playerRock.style.display = "block";
-    playerPaper.style.display = "none";
-    playerScissors.style.display = "none";
-}
-function displayPlayerPaper(){
-    playerRock.style.display = "none";
-    playerPaper.style.display = "block";
-    playerScissors.style.display = "none";
-}
-function displayPlayerScissors(){
-    playerRock.style.display = "none";
-    playerPaper.style.display = "none";
-    playerScissors.style.display = "block";
-}
-function displayComputerRock(){
-    computerRock.style.display = "block";
-    computerPaper.style.display = "none";
-    computerScissors.style.display = "none";
-}
-function displayComputerPaper(){
-    computerRock.style.display = "none";
-    computerPaper.style.display = "block";
-    computerScissors.style.display = "none";
-}
-function displayComputerScissors(){
-    computerRock.style.display = "none";
-    computerPaper.style.display = "none";
-    computerScissors.style.display = "block";
-}
+    function displayPlayerRock(){
+        playerRock.style.display = "block";
+        playerPaper.style.display = "none";
+        playerScissors.style.display = "none";
+    }
+    function displayPlayerPaper(){
+        playerRock.style.display = "none";
+        playerPaper.style.display = "block";
+        playerScissors.style.display = "none";
+    }
+    function displayPlayerScissors(){
+        playerRock.style.display = "none";
+        playerPaper.style.display = "none";
+        playerScissors.style.display = "block";
+    }
+    function displayComputerRock(){
+        computerRock.style.display = "block";
+        computerPaper.style.display = "none";
+        computerScissors.style.display = "none";
+    }
+    function displayComputerPaper(){
+        computerRock.style.display = "none";
+        computerPaper.style.display = "block";
+        computerScissors.style.display = "none";
+    }
+    function displayComputerScissors(){
+        computerRock.style.display = "none";
+        computerPaper.style.display = "none";
+        computerScissors.style.display = "block";
+    }
+
+// hide all hands 
+
+    function hideAllHands(){
+        playerRock.style.cssText = "fill:black; display: none";
+        playerPaper.style.cssText = "fill:black; display: none";
+        playerScissors.style.cssText = "fill:black; display: none";
+        computerRock.style.cssText = "fill:black; display: none";
+        computerPaper.style.cssText = "fill:black; display: none";
+        computerScissors.style.cssText = "fill:black; display: none";
+
+    }
+
+// show gameover screen
+
+    function showGameOver(){
+        mainscreen.classList.add('disappear');
+        gameover.classList.remove('disappear');
+        }
+
+// hide gameover screen
+
+    function hideGameOver(){
+        mainscreen.classList.remove('disappear');
+        gameover.classList.add('disappear');
+    }
 
 // display next round button
-let nextRoundPlaceholder = document.querySelector('.button_placeholder');
-let nextRoundButton = document.querySelector('.next');
+    let nextRoundPlaceholder = document.querySelector('.button_placeholder');
+    let nextRoundButton = document.querySelector('.next');
 
-function displayNextRound(){
-    nextRoundPlaceholder.style.display = "none";
-    nextRoundButton.style.display = "block";
-}
+    function displayNextRound(){
+        nextRoundPlaceholder.style.display = "none";
+        nextRoundButton.style.display = "block";
+    }
+
+// // hide next round button
+    function hideNextRoundButton(){
+        nextRoundPlaceholder.style.display = "block";
+        nextRoundButton.style.display = "none";
+    }
 
 // next round function
 
-let rpsButtonGroup = document.querySelectorAll('.rps');
-let roundText = document.querySelector('.button_placeholder');
+    let rpsButtonGroup = document.querySelectorAll('.rps');
+    let roundText = document.querySelector('.button_placeholder');
 
-function nextRound(){
-    computerScoreboard.textContent = `COM: ${computerScore}`;
-    playerScoreboard.textContent = `PLAYER: ${playerScore}`;
+    function nextRound(){
+        computerScoreboard.textContent = `COM: ${computerScore}`;
+        playerScoreboard.textContent = `PLAYER: ${playerScore}`;
 
-    nextRoundPlaceholder.style.display = "block";
-    nextRoundButton.style.display = "none";
+        hideNextRoundButton();
 
-    computerRock.style.display = "none";
-    computerPaper.style.display = "none";
-    computerScissors.style.display = "none";
-    playerRock.style.display = "none";
-    playerPaper.style.display = "none";
-    playerScissors.style.display = "none";
+        hideAllHands();
 
-    rpsButtonGroup.forEach(button => button.style.display = "none");
-    setTimeout(function(){rpsButtonGroup.forEach(button => button.style.display = "inline"); }, 5);
+        rpsButtonGroup.forEach(button => button.style.display = "none");
+        setTimeout(function(){rpsButtonGroup.forEach(button => button.style.display = "inline"); }, 5);
 
 
-    setTimeout(function(){ROCK.addEventListener('click', playRock);}, 1700);
-    setTimeout(function(){PAPER.addEventListener('click', playPaper);}, 1700);
-    setTimeout(function(){SCISSORS.addEventListener('click', playScissors);}, 1700);
+        setTimeout(function(){ROCK.addEventListener('click', playRock);}, 1700);
+        setTimeout(function(){PAPER.addEventListener('click', playPaper);}, 1700);
+        setTimeout(function(){SCISSORS.addEventListener('click', playScissors);}, 1700);
 
-    roundText.textContent = "Keep Going...";
-    
-}
+        roundText.textContent = "Keep Going...";
+        
+    }
 
-nextRoundButton.addEventListener('click', nextRound);
+    nextRoundButton.addEventListener('click', nextRound);
